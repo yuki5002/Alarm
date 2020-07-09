@@ -13,6 +13,9 @@
 		B6AD078B24ADF52700D53247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078924ADF52700D53247 /* Main.storyboard */; };
 		B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078C24ADF52800D53247 /* Assets.xcassets */; };
 		B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */; };
+		B6DA359A24B727F8003A35C9 /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA359924B727F8003A35C9 /* AlarmSettingViewController.swift */; };
+		B6DA359C24B72E94003A35C9 /* AlarmPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA359B24B72E94003A35C9 /* AlarmPlayViewController.swift */; };
+		B6DA359E24B72FC8003A35C9 /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA359D24B72FC8003A35C9 /* CurrentTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		B6AD078C24ADF52800D53247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6AD078F24ADF52800D53247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6AD079124ADF52800D53247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6DA359924B727F8003A35C9 /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
+		B6DA359B24B72E94003A35C9 /* AlarmPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPlayViewController.swift; sourceTree = "<group>"; };
+		B6DA359D24B72FC8003A35C9 /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				B6AD078C24ADF52800D53247 /* Assets.xcassets */,
 				B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */,
 				B6AD079124ADF52800D53247 /* Info.plist */,
+				B6DA359924B727F8003A35C9 /* AlarmSettingViewController.swift */,
+				B6DA359B24B72E94003A35C9 /* AlarmPlayViewController.swift */,
+				B6DA359D24B72FC8003A35C9 /* CurrentTime.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DA359C24B72E94003A35C9 /* AlarmPlayViewController.swift in Sources */,
 				B6AD078824ADF52700D53247 /* ViewController.swift in Sources */,
 				B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */,
+				B6DA359E24B72FC8003A35C9 /* CurrentTime.swift in Sources */,
+				B6DA359A24B727F8003A35C9 /* AlarmSettingViewController.swift in Sources */,
 				B6AD078624ADF52700D53247 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
