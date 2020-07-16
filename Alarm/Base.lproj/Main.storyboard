@@ -14,7 +14,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wro-kW-mjd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.19607843137254902" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.11764705882352941" green="0.19607843137254902" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OLq-q5-ppd">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -23,6 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.11764705882352941" green="0.19607843137254902" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1667" y="-477"/>
         </scene>
-        <!--Alarm Setting View Controller-->
+        <!--Set View Controller-->
         <scene sceneID="nBY-Dn-SK4">
             <objects>
-                <viewController id="G7Q-la-H95" customClass="AlarmSettingViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="G7Q-la-H95" customClass="SetViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1z9-GX-pjr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +90,8 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hh3-gd-TLT" kind="show" id="JcR-mG-Wny"/>
+                                    <action selector="alarmBthWasPressed:" destination="G7Q-la-H95" eventType="touchUpInside" id="u6Z-UM-Vnz"/>
+                                    <segue destination="hh3-gd-TLT" kind="show" identifier="setToSleeping" id="JcR-mG-Wny"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,36 +106,42 @@
             </objects>
             <point key="canvasLocation" x="2560.8695652173915" y="-477.45535714285711"/>
         </scene>
-        <!--Alarm Play View Controller-->
+        <!--Sleeping View Controller-->
         <scene sceneID="Ynf-n9-Qsq">
             <objects>
-                <viewController id="hh3-gd-TLT" customClass="AlarmPlayViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hh3-gd-TLT" customClass="SleepingViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m6Z-J6-TC1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-12-YVS">
-                                <rect key="frame" x="138" y="95" width="139" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPv-5s-26j">
                                 <rect key="frame" x="127" y="554" width="161" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="ストップ"/>
+                                <connections>
+                                    <action selector="closeBthWasPressed:" destination="hh3-gd-TLT" eventType="touchUpInside" id="D2N-OH-egG"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="アラーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9K-12-YVS">
+                                <rect key="frame" x="55" y="133" width="304" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kLP-Mv-K7J"/>
                     </view>
                     <navigationItem key="navigationItem" id="xos-MQ-owr"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="k9K-12-YVS" id="ubP-ce-grU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrV-qz-7gN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3439" y="-477"/>
+            <point key="canvasLocation" x="3437.68115942029" y="-477.45535714285711"/>
         </scene>
         <!--タイマー-->
         <scene sceneID="gwh-d0-ebF">

@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413224BC6B8600BF6483 /* SetViewController.swift */; };
+		B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */; };
+		B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413624BC6D4C00BF6483 /* Alarm.swift */; };
+		B6801CE524C04E63000AB36C /* スターマーカー.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6801CE424C04E63000AB36C /* スターマーカー.mp3 */; };
 		B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078324ADF52700D53247 /* AppDelegate.swift */; };
 		B6AD078624ADF52700D53247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078524ADF52700D53247 /* SceneDelegate.swift */; };
 		B6AD078824ADF52700D53247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078724ADF52700D53247 /* ViewController.swift */; };
 		B6AD078B24ADF52700D53247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078924ADF52700D53247 /* Main.storyboard */; };
 		B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078C24ADF52800D53247 /* Assets.xcassets */; };
 		B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */; };
-		B6DA359A24B727F8003A35C9 /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA359924B727F8003A35C9 /* AlarmSettingViewController.swift */; };
-		B6DA359C24B72E94003A35C9 /* AlarmPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA359B24B72E94003A35C9 /* AlarmPlayViewController.swift */; };
-		B6DA359E24B72FC8003A35C9 /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DA359D24B72FC8003A35C9 /* CurrentTime.swift */; };
+		B6E7743E24B76E6E0015EFD1 /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */; };
+		B6E7744024B770A20015EFD1 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7743F24B770A20015EFD1 /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B62B413224BC6B8600BF6483 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepingViewController.swift; sourceTree = "<group>"; };
+		B62B413624BC6D4C00BF6483 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		B6801CE424C04E63000AB36C /* スターマーカー.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "スターマーカー.mp3"; sourceTree = "<group>"; };
 		B6AD078024ADF52700D53247 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AD078324ADF52700D53247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6AD078524ADF52700D53247 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +34,8 @@
 		B6AD078C24ADF52800D53247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6AD078F24ADF52800D53247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6AD079124ADF52800D53247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6DA359924B727F8003A35C9 /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
-		B6DA359B24B72E94003A35C9 /* AlarmPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPlayViewController.swift; sourceTree = "<group>"; };
-		B6DA359D24B72FC8003A35C9 /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
+		B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
+		B6E7743F24B770A20015EFD1 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +68,19 @@
 		B6AD078224ADF52700D53247 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				B6801CE424C04E63000AB36C /* スターマーカー.mp3 */,
 				B6AD078324ADF52700D53247 /* AppDelegate.swift */,
 				B6AD078524ADF52700D53247 /* SceneDelegate.swift */,
 				B6AD078724ADF52700D53247 /* ViewController.swift */,
+				B6E7743F24B770A20015EFD1 /* AlarmViewController.swift */,
 				B6AD078924ADF52700D53247 /* Main.storyboard */,
 				B6AD078C24ADF52800D53247 /* Assets.xcassets */,
 				B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */,
 				B6AD079124ADF52800D53247 /* Info.plist */,
-				B6DA359924B727F8003A35C9 /* AlarmSettingViewController.swift */,
-				B6DA359B24B72E94003A35C9 /* AlarmPlayViewController.swift */,
-				B6DA359D24B72FC8003A35C9 /* CurrentTime.swift */,
+				B62B413224BC6B8600BF6483 /* SetViewController.swift */,
+				B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */,
+				B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */,
+				B62B413624BC6D4C00BF6483 /* Alarm.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -136,6 +145,7 @@
 			files = (
 				B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */,
 				B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */,
+				B6801CE524C04E63000AB36C /* スターマーカー.mp3 in Resources */,
 				B6AD078B24ADF52700D53247 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,11 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6DA359C24B72E94003A35C9 /* AlarmPlayViewController.swift in Sources */,
+				B6E7743E24B76E6E0015EFD1 /* CurrentTime.swift in Sources */,
+				B6E7744024B770A20015EFD1 /* AlarmViewController.swift in Sources */,
 				B6AD078824ADF52700D53247 /* ViewController.swift in Sources */,
+				B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */,
 				B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */,
-				B6DA359E24B72FC8003A35C9 /* CurrentTime.swift in Sources */,
-				B6DA359A24B727F8003A35C9 /* AlarmSettingViewController.swift in Sources */,
+				B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */,
+				B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */,
 				B6AD078624ADF52700D53247 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
