@@ -1,5 +1,5 @@
 //
-//  AlarmTableViewController.swift
+//  MondaiTableViewController.swift
 //  Alarm
 //
 //  Created by 平石悠生 on 2020/07/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MondaiTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,21 +19,18 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        
-        cell?.textLabel?.text = "テスト"
-        
-        return cell!
-    }
 
     // MARK: - Table view data source
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

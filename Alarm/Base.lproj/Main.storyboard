@@ -7,49 +7,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--アラーム-->
-        <scene sceneID="4Iq-rL-G61">
-            <objects>
-                <tableViewController id="kPX-m7-yPc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wro-kW-mjd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.11764705882352941" green="0.19607843137254902" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.11764705882352941" green="0.19607843137254902" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OLq-q5-ppd">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OLq-q5-ppd" id="3JE-63-viz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.11764705882352941" green="0.19607843137254902" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="kPX-m7-yPc" id="UWw-C7-8HY"/>
-                            <outlet property="delegate" destination="kPX-m7-yPc" id="cdG-R5-xf9"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="アラーム" id="Ya2-GN-LX2">
-                        <barButtonItem key="rightBarButtonItem" title="Plus" image="plus" catalog="system" id="nHU-lm-UOp">
-                            <connections>
-                                <segue destination="G7Q-la-H95" kind="presentation" id="Slr-xy-ZUQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hVA-FI-Vhk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1667" y="-477"/>
-        </scene>
         <!--Set View Controller-->
         <scene sceneID="nBY-Dn-SK4">
             <objects>
                 <viewController id="G7Q-la-H95" customClass="SetViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1z9-GX-pjr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="アラームの追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-OB-2x6">
@@ -104,7 +67,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w6-0f-Om9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560.8695652173915" y="-477.45535714285711"/>
+            <point key="canvasLocation" x="-67" y="-1860"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AhV-Gj-99X">
+            <objects>
+                <navigationController id="ooA-NV-S5f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ikc-yE-UVG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="53g-c0-RnO" kind="relationship" relationship="rootViewController" id="rtF-2B-h4O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4pE-D0-qqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2622" y="-477"/>
         </scene>
         <!--Sleeping View Controller-->
         <scene sceneID="Ynf-n9-Qsq">
@@ -141,69 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IrV-qz-7gN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3437.68115942029" y="-477.45535714285711"/>
-        </scene>
-        <!--タイマー-->
-        <scene sceneID="gwh-d0-ebF">
-            <objects>
-                <tableViewController id="8aC-p3-iRF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mcx-VI-Rtm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XzV-ae-aDv">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XzV-ae-aDv" id="OKa-oT-6vF">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8aC-p3-iRF" id="kSF-2r-te9"/>
-                            <outlet property="delegate" destination="8aC-p3-iRF" id="MJk-CG-sKY"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="タイマー" id="O1g-BL-Dl3">
-                        <barButtonItem key="rightBarButtonItem" title="Plus" image="plus" catalog="system" id="EVA-7Z-f6c"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NoC-FE-212" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1667" y="218"/>
-        </scene>
-        <!--問題集-->
-        <scene sceneID="vNN-20-rIX">
-            <objects>
-                <tableViewController id="Zp4-bP-4GS" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O3F-4y-1hs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="64R-cX-ouC">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="64R-cX-ouC" id="5kj-ci-3Qh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Zp4-bP-4GS" id="Tes-ZV-0yW"/>
-                            <outlet property="delegate" destination="Zp4-bP-4GS" id="PGs-uB-aEG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="問題集" id="cIx-By-VBC">
-                        <barButtonItem key="rightBarButtonItem" title="Plus" image="plus" catalog="system" id="Brw-VF-GP5"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ITE-Vx-R7l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="567" y="948"/>
+            <point key="canvasLocation" x="810" y="-1860"/>
         </scene>
         <!--問題集-->
         <scene sceneID="bOg-Dp-NU5">
@@ -215,12 +132,30 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Zp4-bP-4GS" kind="relationship" relationship="rootViewController" id="Qc7-Nv-gfk"/>
+                        <segue destination="QEg-X8-QtS" kind="relationship" relationship="rootViewController" id="9dB-PP-5AH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trh-3c-vy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-349" y="948"/>
+        </scene>
+        <!--問題集-->
+        <scene sceneID="T6E-Zt-Rgx">
+            <objects>
+                <viewController id="QEg-X8-QtS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EZd-B3-HHa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="l7P-ZR-1Qv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="問題集" id="Tc5-O7-Kzb">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" landscapeImage="plus" id="ckJ-0y-oMA"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19F-Ty-Rwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="948"/>
         </scene>
         <!--タイマー-->
         <scene sceneID="kMM-LR-3AU">
@@ -232,12 +167,84 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8aC-p3-iRF" kind="relationship" relationship="rootViewController" id="eXc-Yu-ez2"/>
+                        <segue destination="4vg-Ih-mDx" kind="relationship" relationship="rootViewController" id="Eyb-DS-fUf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQr-QU-eNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="751" y="218"/>
+        </scene>
+        <!--タイマー-->
+        <scene sceneID="Wh4-lp-mFT">
+            <objects>
+                <viewController id="4vg-Ih-mDx" customClass="TimerSettingViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3R0-Xq-WNs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hkl-vZ-aeG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="248"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o4C-x6-wN4">
+                                <rect key="frame" x="0.0" y="344" width="414" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ady-Hn-eLY">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ady-Hn-eLY" id="paj-q5-Dvh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEm-gU-sQb">
+                                <rect key="frame" x="166" y="685" width="82" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="スタート">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Xky-eF-Yrv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="タイマー" id="iRR-TS-HNi"/>
+                    <connections>
+                        <outlet property="sleepTimePicker" destination="Hkl-vZ-aeG" id="GaX-lq-kTW"/>
+                        <outlet property="table" destination="o4C-x6-wN4" id="Jv0-pN-GL0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rS6-9g-kzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666.6666666666667" y="217.63392857142856"/>
+        </scene>
+        <!--アラーム-->
+        <scene sceneID="xrT-nB-orZ">
+            <objects>
+                <viewController id="heu-g0-zN1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SV7-R3-zgo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xgI-6Y-RXD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="アラーム" id="pMI-5w-q4w">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" landscapeImage="plus" id="0r6-6q-YIk">
+                            <connections>
+                                <segue destination="ooA-NV-S5f" kind="presentation" id="kgy-kK-QTl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRJ-ku-Kwl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1667" y="-477"/>
         </scene>
         <!--アラーム-->
         <scene sceneID="gdx-yT-3Yh">
@@ -249,7 +256,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kPX-m7-yPc" kind="relationship" relationship="rootViewController" id="bDv-GK-sr4"/>
+                        <segue destination="heu-g0-zN1" kind="relationship" relationship="rootViewController" id="HgW-FN-wmD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBR-BU-wgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -274,6 +281,204 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3m-Kh-UIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-349" y="-11"/>
+        </scene>
+        <!--アラームを追加-->
+        <scene sceneID="RMk-OW-Vdz">
+            <objects>
+                <viewController id="53g-c0-RnO" customClass="AlarmSettingViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kMw-1f-OWP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gj4-yq-XzY">
+                                <rect key="frame" x="0.0" y="56" width="414" height="248"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7KH-xV-gd8">
+                                <rect key="frame" x="0.0" y="312" width="414" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="SSE-93-L5J">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SSE-93-L5J" id="x3S-GA-MaJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tb9-yN-vOP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0Xe-vI-rZQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="アラームを追加" id="QvU-ki-uWw">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="60V-Ld-Tdx">
+                            <connections>
+                                <action selector="back" destination="53g-c0-RnO" id="WeX-Ha-3mp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="XQX-Dd-9sd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sleepTimePicker" destination="gj4-yq-XzY" id="Zy0-UK-ngQ"/>
+                        <outlet property="table" destination="7KH-xV-gd8" id="5wB-Vk-cbf"/>
+                        <segue destination="2iN-zl-gfd" kind="show" identifier="toMission" id="CeR-L8-WpF"/>
+                        <segue destination="MUR-mp-OIp" kind="show" identifier="toNumber" id="B8G-CT-t5c"/>
+                        <segue destination="fR7-s5-z5g" kind="show" identifier="toSound" id="r6f-0E-FwY"/>
+                        <segue destination="6H0-SD-bB8" kind="show" identifier="toSpeaker" id="9jt-1p-leJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydg-je-K3A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3540.579710144928" y="-477.45535714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H0o-dX-xDg">
+            <objects>
+                <navigationController id="2iN-zl-gfd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Fyk-vA-z85"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RQ7-fL-g6r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VOk-Jl-3jX" kind="relationship" relationship="rootViewController" id="tra-kj-h25"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgh-QX-UXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4680" y="-2536"/>
+        </scene>
+        <!--ミッション-->
+        <scene sceneID="ByV-D3-7dv">
+            <objects>
+                <viewController id="VOk-Jl-3jX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="39h-FJ-5Ck">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fSK-yi-oNz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ミッション" id="9eX-mU-jdA">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="bku-wB-f2Z"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFK-n7-fBP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5622" y="-2536"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n2d-lh-3XY">
+            <objects>
+                <navigationController id="MUR-mp-OIp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bYc-zK-p69"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eoI-GB-AU1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e6h-kG-bO8" kind="relationship" relationship="rootViewController" id="xqL-m9-xiP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfe-PF-3uz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4680" y="-1851"/>
+        </scene>
+        <!--ミッションの数-->
+        <scene sceneID="fpq-E7-8WQ">
+            <objects>
+                <viewController id="e6h-kG-bO8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oaj-GQ-q5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hqU-Kh-kLZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ミッションの数" id="dvt-KM-FFZ">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="Xfv-Y9-xY9"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hA-mt-Sn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5622" y="-1851"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pwF-Ec-edQ">
+            <objects>
+                <navigationController id="fR7-s5-z5g" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Mzr-hQ-xgH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pM2-qP-VTV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wbg-Q8-K3X" kind="relationship" relationship="rootViewController" id="Sok-Sl-rNW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0k-UW-t1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4680" y="-1164"/>
+        </scene>
+        <!--サウンド-->
+        <scene sceneID="ABY-Kn-NHA">
+            <objects>
+                <viewController id="Wbg-Q8-K3X" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OgN-GJ-xKf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Wqr-2P-C9a"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="サウンド" id="1E6-cd-4vk">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="L1I-pI-Hey"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLq-gu-gej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5622" y="-1164"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="04n-32-Z3g">
+            <objects>
+                <navigationController id="6H0-SD-bB8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5Mu-af-nr5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f77-vE-17z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lUk-wc-enw" kind="relationship" relationship="rootViewController" id="JIA-sG-oiq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDu-eA-mmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4680" y="-477"/>
+        </scene>
+        <!--スピーカー-->
+        <scene sceneID="alG-mv-JF1">
+            <objects>
+                <viewController id="lUk-wc-enw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lE6-Tx-5oZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RsY-ZZ-li4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="スピーカー" id="KF8-5g-pSB">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="dO9-0B-IIY"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfM-G1-QGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5622" y="-478"/>
         </scene>
     </scenes>
     <resources>

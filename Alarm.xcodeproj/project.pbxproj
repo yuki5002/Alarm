@@ -11,6 +11,7 @@
 		B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */; };
 		B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413624BC6D4C00BF6483 /* Alarm.swift */; };
 		B6801CE524C04E63000AB36C /* スターマーカー.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6801CE424C04E63000AB36C /* スターマーカー.mp3 */; };
+		B69FC84C24C59A51004A9E88 /* TimerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */; };
 		B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078324ADF52700D53247 /* AppDelegate.swift */; };
 		B6AD078624ADF52700D53247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078524ADF52700D53247 /* SceneDelegate.swift */; };
 		B6AD078824ADF52700D53247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078724ADF52700D53247 /* ViewController.swift */; };
@@ -18,7 +19,9 @@
 		B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078C24ADF52800D53247 /* Assets.xcassets */; };
 		B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */; };
 		B6E7743E24B76E6E0015EFD1 /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */; };
-		B6E7744024B770A20015EFD1 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7743F24B770A20015EFD1 /* AlarmViewController.swift */; };
+		B6F103C424C4462900EC2F6A /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */; };
+		B6F103C624C4469800EC2F6A /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F103C524C4469800EC2F6A /* AlarmViewController.swift */; };
+		B6F103CC24C4720100EC2F6A /* MondaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F103CB24C4720100EC2F6A /* MondaiTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,7 @@
 		B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepingViewController.swift; sourceTree = "<group>"; };
 		B62B413624BC6D4C00BF6483 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		B6801CE424C04E63000AB36C /* スターマーカー.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "スターマーカー.mp3"; sourceTree = "<group>"; };
+		B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingViewController.swift; sourceTree = "<group>"; };
 		B6AD078024ADF52700D53247 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AD078324ADF52700D53247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6AD078524ADF52700D53247 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +39,9 @@
 		B6AD078F24ADF52800D53247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6AD079124ADF52800D53247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
-		B6E7743F24B770A20015EFD1 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
+		B6F103C524C4469800EC2F6A /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		B6F103CB24C4720100EC2F6A /* MondaiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondaiTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +78,10 @@
 				B6AD078324ADF52700D53247 /* AppDelegate.swift */,
 				B6AD078524ADF52700D53247 /* SceneDelegate.swift */,
 				B6AD078724ADF52700D53247 /* ViewController.swift */,
-				B6E7743F24B770A20015EFD1 /* AlarmViewController.swift */,
+				B6F103C524C4469800EC2F6A /* AlarmViewController.swift */,
+				B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */,
+				B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */,
+				B6F103CB24C4720100EC2F6A /* MondaiTableViewController.swift */,
 				B6AD078924ADF52700D53247 /* Main.storyboard */,
 				B6AD078C24ADF52800D53247 /* Assets.xcassets */,
 				B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */,
@@ -157,10 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F103C424C4462900EC2F6A /* AlarmSettingViewController.swift in Sources */,
 				B6E7743E24B76E6E0015EFD1 /* CurrentTime.swift in Sources */,
-				B6E7744024B770A20015EFD1 /* AlarmViewController.swift in Sources */,
 				B6AD078824ADF52700D53247 /* ViewController.swift in Sources */,
+				B69FC84C24C59A51004A9E88 /* TimerSettingViewController.swift in Sources */,
+				B6F103CC24C4720100EC2F6A /* MondaiTableViewController.swift in Sources */,
 				B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */,
+				B6F103C624C4469800EC2F6A /* AlarmViewController.swift in Sources */,
 				B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */,
 				B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */,
 				B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */,
