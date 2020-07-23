@@ -1,18 +1,20 @@
 //
-//  AlarmSettingTableViewController.swift
+//  TimerSettingViewController.swift
 //  Alarm
 //
-//  Created by 平石悠生 on 2020/07/19.
+//  Created by 平石悠生 on 2020/07/20.
 //  Copyright © 2020 平石悠生. All rights reserved.
 //
 
 import UIKit
 
-class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TimerSettingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var table: UITableView!
     
     @IBOutlet var sleepTimePicker: UIDatePicker!
+    
+    @IBOutlet var startbutton: UIButton!
     
     var itemNameArray = [String]()
 
@@ -25,11 +27,14 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
         
         sleepTimePicker.locale = Locale.init(identifier: "Japanese")
         
-        itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー"]
+        itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー", "音量"]
+        
+        startbutton.layer.borderWidth = 2.0
+        startbutton.layer.borderColor = UIColor.green.cgColor
     }
-    
-    @IBAction func back() {
-        dismiss(animated: true, completion: nil)
+
+    @IBAction func start() {
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
@@ -48,19 +53,15 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
         return 60
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            performSegue(withIdentifier: "toMission", sender: nil)
-        }
-        if indexPath.row == 1 {
-            performSegue(withIdentifier: "toNumber", sender: nil)
-        }
-        if indexPath.row == 2 {
-            performSegue(withIdentifier: "toSound", sender: nil)
-        }
-        if indexPath.row == 3 {
-            performSegue(withIdentifier: "toSpeaker", sender: nil)
-        }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }

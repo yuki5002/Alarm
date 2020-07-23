@@ -49,7 +49,7 @@ class Alarm{
             //タイマーにnil代入
             sleepTimer = nil
             //音源のパス
-            let soundFilePath = Bundle.main.path(forResource: "スターマーカー", ofType: "mp3")!
+            let soundFilePath = Bundle.main.path(forResource: "LiT!使用 - スターマーカー", ofType: "mp3")!
             //パスのURL
             let sound:URL = URL(fileURLWithPath: soundFilePath)
             do {

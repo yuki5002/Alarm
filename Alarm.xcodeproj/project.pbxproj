@@ -10,30 +10,37 @@
 		B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413224BC6B8600BF6483 /* SetViewController.swift */; };
 		B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */; };
 		B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413624BC6D4C00BF6483 /* Alarm.swift */; };
-		B6801CE524C04E63000AB36C /* スターマーカー.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6801CE424C04E63000AB36C /* スターマーカー.mp3 */; };
+		B64C294024C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B64C293F24C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 */; };
 		B69FC84C24C59A51004A9E88 /* TimerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */; };
+		B69FC85224C5D48A004A9E88 /* MondaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC85124C5D48A004A9E88 /* MondaiViewController.swift */; };
+		B69FC85424C5D49D004A9E88 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC85324C5D49D004A9E88 /* MissionViewController.swift */; };
+		B69FC85624C5D4AA004A9E88 /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC85524C5D4AA004A9E88 /* NumberViewController.swift */; };
+		B69FC85824C5D4D7004A9E88 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC85724C5D4D7004A9E88 /* SoundViewController.swift */; };
+		B69FC85A24C5D4E6004A9E88 /* SpeakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC85924C5D4E6004A9E88 /* SpeakerViewController.swift */; };
 		B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078324ADF52700D53247 /* AppDelegate.swift */; };
 		B6AD078624ADF52700D53247 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078524ADF52700D53247 /* SceneDelegate.swift */; };
-		B6AD078824ADF52700D53247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD078724ADF52700D53247 /* ViewController.swift */; };
 		B6AD078B24ADF52700D53247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078924ADF52700D53247 /* Main.storyboard */; };
 		B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078C24ADF52800D53247 /* Assets.xcassets */; };
 		B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */; };
 		B6E7743E24B76E6E0015EFD1 /* CurrentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */; };
 		B6F103C424C4462900EC2F6A /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */; };
 		B6F103C624C4469800EC2F6A /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F103C524C4469800EC2F6A /* AlarmViewController.swift */; };
-		B6F103CC24C4720100EC2F6A /* MondaiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F103CB24C4720100EC2F6A /* MondaiTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B62B413224BC6B8600BF6483 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepingViewController.swift; sourceTree = "<group>"; };
 		B62B413624BC6D4C00BF6483 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		B6801CE424C04E63000AB36C /* スターマーカー.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "スターマーカー.mp3"; sourceTree = "<group>"; };
+		B64C293F24C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "LiT!使用 - スターマーカー.mp3"; sourceTree = "<group>"; };
 		B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingViewController.swift; sourceTree = "<group>"; };
+		B69FC85124C5D48A004A9E88 /* MondaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondaiViewController.swift; sourceTree = "<group>"; };
+		B69FC85324C5D49D004A9E88 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
+		B69FC85524C5D4AA004A9E88 /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
+		B69FC85724C5D4D7004A9E88 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		B69FC85924C5D4E6004A9E88 /* SpeakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewController.swift; sourceTree = "<group>"; };
 		B6AD078024ADF52700D53247 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AD078324ADF52700D53247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6AD078524ADF52700D53247 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6AD078724ADF52700D53247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6AD078A24ADF52700D53247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6AD078C24ADF52800D53247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6AD078F24ADF52800D53247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,7 +48,6 @@
 		B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTime.swift; sourceTree = "<group>"; };
 		B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
 		B6F103C524C4469800EC2F6A /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
-		B6F103CB24C4720100EC2F6A /* MondaiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondaiTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B69FC84D24C5D3BD004A9E88 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				B6F103C524C4469800EC2F6A /* AlarmViewController.swift */,
+				B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */,
+				B69FC85B24C5D543004A9E88 /* Setting */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		B69FC84E24C5D3EB004A9E88 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		B69FC84F24C5D421004A9E88 /* Mondai */ = {
+			isa = PBXGroup;
+			children = (
+				B69FC85124C5D48A004A9E88 /* MondaiViewController.swift */,
+			);
+			path = Mondai;
+			sourceTree = "<group>";
+		};
+		B69FC85024C5D443004A9E88 /* AlarmTest */ = {
+			isa = PBXGroup;
+			children = (
+				B62B413224BC6B8600BF6483 /* SetViewController.swift */,
+				B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */,
+				B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */,
+				B62B413624BC6D4C00BF6483 /* Alarm.swift */,
+			);
+			path = AlarmTest;
+			sourceTree = "<group>";
+		};
+		B69FC85B24C5D543004A9E88 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B69FC85324C5D49D004A9E88 /* MissionViewController.swift */,
+				B69FC85524C5D4AA004A9E88 /* NumberViewController.swift */,
+				B69FC85724C5D4D7004A9E88 /* SoundViewController.swift */,
+				B69FC85924C5D4E6004A9E88 /* SpeakerViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		B6AD077724ADF52700D53247 = {
 			isa = PBXGroup;
 			children = (
@@ -74,22 +128,17 @@
 		B6AD078224ADF52700D53247 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				B6801CE424C04E63000AB36C /* スターマーカー.mp3 */,
+				B64C293F24C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 */,
 				B6AD078324ADF52700D53247 /* AppDelegate.swift */,
 				B6AD078524ADF52700D53247 /* SceneDelegate.swift */,
-				B6AD078724ADF52700D53247 /* ViewController.swift */,
-				B6F103C524C4469800EC2F6A /* AlarmViewController.swift */,
-				B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */,
-				B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */,
-				B6F103CB24C4720100EC2F6A /* MondaiTableViewController.swift */,
+				B69FC84D24C5D3BD004A9E88 /* Alarm */,
+				B69FC84E24C5D3EB004A9E88 /* Timer */,
+				B69FC84F24C5D421004A9E88 /* Mondai */,
+				B69FC85024C5D443004A9E88 /* AlarmTest */,
 				B6AD078924ADF52700D53247 /* Main.storyboard */,
 				B6AD078C24ADF52800D53247 /* Assets.xcassets */,
 				B6AD078E24ADF52800D53247 /* LaunchScreen.storyboard */,
 				B6AD079124ADF52800D53247 /* Info.plist */,
-				B62B413224BC6B8600BF6483 /* SetViewController.swift */,
-				B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */,
-				B6E7743D24B76E6E0015EFD1 /* CurrentTime.swift */,
-				B62B413624BC6D4C00BF6483 /* Alarm.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -153,8 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */,
+				B64C294024C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 in Resources */,
 				B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */,
-				B6801CE524C04E63000AB36C /* スターマーカー.mp3 in Resources */,
 				B6AD078B24ADF52700D53247 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,14 +217,17 @@
 			files = (
 				B6F103C424C4462900EC2F6A /* AlarmSettingViewController.swift in Sources */,
 				B6E7743E24B76E6E0015EFD1 /* CurrentTime.swift in Sources */,
-				B6AD078824ADF52700D53247 /* ViewController.swift in Sources */,
+				B69FC85424C5D49D004A9E88 /* MissionViewController.swift in Sources */,
 				B69FC84C24C59A51004A9E88 /* TimerSettingViewController.swift in Sources */,
-				B6F103CC24C4720100EC2F6A /* MondaiTableViewController.swift in Sources */,
 				B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */,
 				B6F103C624C4469800EC2F6A /* AlarmViewController.swift in Sources */,
 				B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */,
+				B69FC85224C5D48A004A9E88 /* MondaiViewController.swift in Sources */,
 				B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */,
+				B69FC85624C5D4AA004A9E88 /* NumberViewController.swift in Sources */,
+				B69FC85824C5D4D7004A9E88 /* SoundViewController.swift in Sources */,
 				B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */,
+				B69FC85A24C5D4E6004A9E88 /* SpeakerViewController.swift in Sources */,
 				B6AD078624ADF52700D53247 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
