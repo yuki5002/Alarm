@@ -11,27 +11,83 @@ import UIKit
 class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var table: UITableView!
-    
     @IBOutlet var sleepTimePicker: UIDatePicker!
-    
     var itemNameArray = [String]()
+    
+    var saveData: UserDefaults = UserDefaults.standard
+    var id: Int = 0
+    var dataArray = [[String]]()
+    var addArray = [String]()
+    var selectedTimeStr: String = ""
+    var mission: Int = 0
+    var missionNum: Int = 0
+    var sound: Int = 0
+    var speaker: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         table.dataSource = self
-        
         table.delegate = self
-        
         sleepTimePicker.locale = Locale.init(identifier: "Japanese")
+        itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー","繰り返し"]
         
-        itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー","繰り返し", "音量"]
+        let now = Date()
+        print(now)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        selectedTimeStr = dateFormatter.string(from: now)
+        print(selectedTimeStr)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+//        navigationController!.navigationBar.topItem!.title = "アラームを追加"
     }
     
     @IBAction func back() {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    
+    
+    
+    
+    //データの保存
+    @IBAction func save() {
+        if saveData.object(forKey: "idNum") == nil {
+            id = 0
+            saveData.set(id, forKey: "idNum")
+        }else {
+            id = saveData.object(forKey: "idNum") as! Int + 1
+            saveData.set(id, forKey: "idNum")
+        }
+        saveData.set(mission, forKey: "mission" + String(id))
+        saveData.set(missionNum, forKey: "missionNum" + String(id))
+        saveData.set(sound, forKey: "sound" + String(id))
+        saveData.set(speaker, forKey: "speaker" + String(id))
+        
+        addArray = [selectedTimeStr, String(id)]
+        dataArray.append(addArray)
+        saveData.set(dataArray, forKey: "dataArray")
+        print(dataArray)
+        print(String(mission) + String(missionNum) + String(sound) + String(speaker))
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func datePickerValueChanged(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        selectedTimeStr = dateFormatter.string(from: sender.date)
+        print(selectedTimeStr)
+    }
+    
+    
+    
+    
+    
+    
+    
+    //cellの内容
     func tableView(_ tableView: UITableView, numberOfRowsInSection selection: Int) -> Int {
         return itemNameArray.count
     }

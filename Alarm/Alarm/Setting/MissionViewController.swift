@@ -13,7 +13,7 @@ class MissionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //vigationController!.navigationBar.topItem!.title = "戻る"
+        navigationController!.navigationBar.topItem!.title = "戻る"
         
     }
     /*

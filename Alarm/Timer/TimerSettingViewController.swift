@@ -27,7 +27,7 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
         
         sleepTimePicker.locale = Locale.init(identifier: "Japanese")
         
-        itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー", "音量"]
+        itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー"]
         
         startbutton.layer.borderWidth = 2.0
         startbutton.layer.borderColor = UIColor.green.cgColor
