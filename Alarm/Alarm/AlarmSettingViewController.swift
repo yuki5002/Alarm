@@ -31,6 +31,7 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
         table.delegate = self
         sleepTimePicker.locale = Locale.init(identifier: "Japanese")
         itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー","繰り返し"]
+        table.tableFooterView = UIView()
         
         let now = Date()
         print(now)
@@ -38,9 +39,6 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
         dateFormatter.dateFormat = "HH:mm"
         selectedTimeStr = dateFormatter.string(from: now)
         print(selectedTimeStr)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-//        navigationController!.navigationBar.topItem!.title = "アラームを追加"
     }
     
     @IBAction func back() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B62321CB24D2D44300B2FF8F /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62321C924D2D44300B2FF8F /* AlarmTableViewCell.swift */; };
+		B62321CC24D2D44300B2FF8F /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B62321CA24D2D44300B2FF8F /* AlarmTableViewCell.xib */; };
 		B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413224BC6B8600BF6483 /* SetViewController.swift */; };
 		B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */; };
 		B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413624BC6D4C00BF6483 /* Alarm.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B62321C924D2D44300B2FF8F /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
+		B62321CA24D2D44300B2FF8F /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
 		B62B413224BC6B8600BF6483 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepingViewController.swift; sourceTree = "<group>"; };
 		B62B413624BC6D4C00BF6483 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 			children = (
 				B6F103C524C4469800EC2F6A /* AlarmViewController.swift */,
 				B6F103C324C4462900EC2F6A /* AlarmSettingViewController.swift */,
+				B62321C924D2D44300B2FF8F /* AlarmTableViewCell.swift */,
+				B62321CA24D2D44300B2FF8F /* AlarmTableViewCell.xib */,
 				B69FC85B24C5D543004A9E88 /* Setting */,
 			);
 			path = Alarm;
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62321CC24D2D44300B2FF8F /* AlarmTableViewCell.xib in Resources */,
 				B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */,
 				B64C294024C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 in Resources */,
 				B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */,
@@ -220,6 +227,7 @@
 				B69FC85424C5D49D004A9E88 /* MissionViewController.swift in Sources */,
 				B69FC84C24C59A51004A9E88 /* TimerSettingViewController.swift in Sources */,
 				B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */,
+				B62321CB24D2D44300B2FF8F /* AlarmTableViewCell.swift in Sources */,
 				B6F103C624C4469800EC2F6A /* AlarmViewController.swift in Sources */,
 				B6AD078424ADF52700D53247 /* AppDelegate.swift in Sources */,
 				B69FC85224C5D48A004A9E88 /* MondaiViewController.swift in Sources */,
