@@ -32,6 +32,7 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
         sleepTimePicker.locale = Locale.init(identifier: "Japanese")
         itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー","繰り返し"]
         table.tableFooterView = UIView()
+        //sleepTimePicker.preferredDatePickerStyle = .wheels
         
         let now = Date()
         print(now)

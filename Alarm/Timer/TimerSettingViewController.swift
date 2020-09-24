@@ -16,7 +16,7 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet var label: UILabel!
     
     var itemNameArray = [String]()
-    
+    var saveData: UserDefaults = UserDefaults.standard
     
     var timer: Timer = Timer()
     var selectedTimeHStr: String = ""
@@ -24,7 +24,8 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
     var selectedTimeHInt: Int = 0
     var selectedTimeMInt: Int = 0
     var count: Int = 0
-    var secound: Int = 0
+    var countMemo: Int = 0
+    var second: Int = 0
     var minute: Int = 0
     var hour: Int = 0
 
@@ -40,59 +41,86 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
         startbutton.layer.borderWidth = 2.0
         startbutton.layer.borderColor = UIColor.green.cgColor
         
-        let now = Date()
-        let dateFormatterM = DateFormatter()
-        dateFormatterM.dateFormat = "mm"
-        let dateFormatterS = DateFormatter()
-        dateFormatterS.dateFormat = "ss"
-        selectedTimeHStr = dateFormatterM.string(from: now)
-        selectedTimeMStr = dateFormatterS.string(from: now)
-        selectedTimeHInt = Int(selectedTimeHStr)!
-        selectedTimeMInt = Int(selectedTimeMStr)!
-        count = selectedTimeHInt * 60 + selectedTimeMInt
+        count = 60
+        if saveData.object(forKey: "count") != nil {
+            count = saveData.object(forKey: "count") as! Int
+            sleepTimePicker.countDownDuration = TimeInterval(saveData.object(forKey: "count") as! Int)
+        }
+        
         label.isHidden = true
+    }
+    
+    func labelController() {
+        second = count % 60
+        minute = count / 60
+        hour = minute / 60
+        minute = minute - (hour * 60)
+        if hour != 0 {
+            if minute < 10 && second < 10 {
+                label.text = String(hour) + ":0" + String(minute) + ":0" + String(second)
+            }else if minute < 10 {
+                label.text = String(hour) + ":0" + String(minute) + ":" + String(second)
+            }else if second < 10 {
+                label.text = String(hour) + ":" + String(minute) + ":0" + String(second)
+            }else {
+                label.text = String(hour) + ":" + String(minute) + ":" + String(second)
+            }
+        }else {
+            if minute < 10 && second < 10 {
+                label.text = "0" + String(minute) + ":0" + String(second)
+            }else if minute < 10 {
+                label.text = "0" + String(minute) + ":" + String(second)
+            }else if second < 10 {
+                label.text = String(minute) + ":0" + String(second)
+            }else {
+                label.text = String(minute) + ":" + String(second)
+            }
+        }
     }
     
     @objc func down() {
         count = count - 1
-        secound = count % 60
-        minute = count / 60
-        hour = minute / 60
-        minute = minute - (hour * 60)
-        label.text = String(hour) + " : " + String(minute) + " : " + String(secound)
+        labelController()
     }
     
     @IBAction func start() {
-        if !timer.isValid {
-            timer = Timer.scheduledTimer(timeInterval: 1,
-                                             target: self,
-                                             selector: #selector(self.down),
-                                             userInfo: nil,
-                                             repeats: true)
-            startbutton.setTitle("ストップ", for: .normal)
-            sleepTimePicker.isHidden = true
-            label.isHidden = false
-        } else if timer.isValid {
-            timer.invalidate()
-            startbutton.setTitle("スタート", for: .normal)
-            sleepTimePicker.isHidden = false
-            label.isHidden = true
+        print(count)
+        if count != 0 {
+            if label.isHidden == true {
+                labelController()
+            }
+            if !timer.isValid {
+                timer = Timer.scheduledTimer(timeInterval: 1,
+                                                 target: self,
+                                                 selector: #selector(self.down),
+                                                 userInfo: nil,
+                                                 repeats: true)
+                startbutton.setTitle("ストップ", for: .normal)
+                sleepTimePicker.isHidden = true
+                label.isHidden = false
+            } else if timer.isValid {
+                timer.invalidate()
+                startbutton.setTitle("スタート", for: .normal)
+                sleepTimePicker.isHidden = false
+                label.isHidden = true
+                count = countMemo
+                saveData.set(count, forKey: "count")
+            }
         }
     }
     
     @IBAction func datePickerValueChanged(sender: UIDatePicker) {
+        let dateFormatterH = DateFormatter()
+        dateFormatterH.dateFormat = "HH"
         let dateFormatterM = DateFormatter()
-        dateFormatterM.dateFormat = "HH"
-        let dateFormatterS = DateFormatter()
-        dateFormatterS.dateFormat = "mm"
-        selectedTimeHStr = dateFormatterM.string(from: sender.date)
-        selectedTimeMStr = dateFormatterS.string(from: sender.date)
+        dateFormatterM.dateFormat = "mm"
+        selectedTimeHStr = dateFormatterH.string(from: sender.date)
+        selectedTimeMStr = dateFormatterM.string(from: sender.date)
         selectedTimeHInt = Int(selectedTimeHStr)!
         selectedTimeMInt = Int(selectedTimeMStr)!
         count = selectedTimeHInt * 3600 + selectedTimeMInt * 60
         print(count)
-        print("secound : " + String(count % 60))
-        print("minute : " + String(count / 60))
+        countMemo = count
     }
     
     
