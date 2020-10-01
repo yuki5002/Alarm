@@ -32,7 +32,11 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
         sleepTimePicker.locale = Locale.init(identifier: "Japanese")
         itemNameArray = ["ミッション", "ミッションの数", "サウンド", "スピーカー","繰り返し"]
         table.tableFooterView = UIView()
-        //sleepTimePicker.preferredDatePickerStyle = .wheels
+        if #available(iOS 13.4, *) {
+            sleepTimePicker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
         
         let now = Date()
         print(now)
@@ -61,7 +65,7 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
             saveData.set(id, forKey: "idNum")
         }
         saveData.set(mission, forKey: "mission" + String(id))
-        saveData.set(missionNum, forKey: "missionNum" + String(id))
+        saveData.set(missionNum, forKey: "missionNum" + String(id)) 
         saveData.set(sound, forKey: "sound" + String(id))
         saveData.set(speaker, forKey: "speaker" + String(id))
         

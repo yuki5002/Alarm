@@ -29,7 +29,11 @@ class AlarmViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        if saveData.object(forKey: "dataArray") != nil {
+            dataArray = saveData.object(forKey: "dataArray") as! [[String]]
+        }
+        table.reloadData()
+        print(dataArray)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

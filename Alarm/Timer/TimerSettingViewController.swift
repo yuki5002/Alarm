@@ -89,7 +89,7 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
             if label.isHidden == true {
                 labelController()
             }
-            if !timer.isValid {
+            if !timer.isValid && count > 0 {
                 timer = Timer.scheduledTimer(timeInterval: 1,
                                                  target: self,
                                                  selector: #selector(self.down),

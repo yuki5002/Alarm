@@ -290,12 +290,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GWn-jn-ZZx" id="lXD-39-mPC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ipa-1T-tir">
-                                                    <rect key="frame" x="337" y="25" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </switch>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -363,9 +357,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gj4-yq-XzY">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gj4-yq-XzY">
                                 <rect key="frame" x="0.0" y="56" width="414" height="248"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="248" id="EwA-qK-rRH"/>
+                                </constraints>
                                 <connections>
                                     <action selector="datePickerValueChangedWithSender:" destination="53g-c0-RnO" eventType="valueChanged" id="hBC-bv-ja4"/>
                                 </connections>
@@ -416,6 +412,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Xe-vI-rZQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gj4-yq-XzY" firstAttribute="leading" secondItem="0Xe-vI-rZQ" secondAttribute="leading" id="ANZ-mL-INM"/>
+                            <constraint firstItem="gj4-yq-XzY" firstAttribute="trailing" secondItem="0Xe-vI-rZQ" secondAttribute="trailing" id="Isa-eJ-vJo"/>
+                            <constraint firstItem="gj4-yq-XzY" firstAttribute="top" secondItem="0Xe-vI-rZQ" secondAttribute="top" id="hro-SE-hZo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="アラームを追加" id="QvU-ki-uWw">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="60V-Ld-Tdx">
