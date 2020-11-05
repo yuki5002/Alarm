@@ -79,33 +79,38 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @objc func down() {
-        count = count - 1
-        labelController()
+        if count > 0 {
+            count = count - 1
+            labelController()
+        }else {
+            timer.invalidate()
+            startbutton.setTitle("スタート", for: .normal)
+            sleepTimePicker.isHidden = false
+            label.isHidden = true
+            count = countMemo
+            saveData.set(count, forKey: "count")
+        }
     }
     
     @IBAction func start() {
         print(count)
-        if count != 0 {
-            if label.isHidden == true {
-                labelController()
-            }
-            if !timer.isValid && count > 0 {
-                timer = Timer.scheduledTimer(timeInterval: 1,
-                                                 target: self,
-                                                 selector: #selector(self.down),
-                                                 userInfo: nil,
-                                                 repeats: true)
-                startbutton.setTitle("ストップ", for: .normal)
-                sleepTimePicker.isHidden = true
-                label.isHidden = false
-            } else if timer.isValid {
-                timer.invalidate()
-                startbutton.setTitle("スタート", for: .normal)
-                sleepTimePicker.isHidden = false
-                label.isHidden = true
-                count = countMemo
-                saveData.set(count, forKey: "count")
-            }
+        if !timer.isValid && count > 0 {
+            labelController()
+            timer = Timer.scheduledTimer(timeInterval: 1,
+                                             target: self,
+                                             selector: #selector(self.down),
+                                             userInfo: nil,
+                                             repeats: true)
+            startbutton.setTitle("ストップ", for: .normal)
+            sleepTimePicker.isHidden = true
+            label.isHidden = false
+        } else if timer.isValid {
+            timer.invalidate()
+            startbutton.setTitle("スタート", for: .normal)
+            sleepTimePicker.isHidden = false
+            label.isHidden = true
+            count = countMemo
+            saveData.set(count, forKey: "count")
         }
     }
     
