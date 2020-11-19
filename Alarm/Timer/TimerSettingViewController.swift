@@ -13,6 +13,7 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet var table: UITableView!
     @IBOutlet var sleepTimePicker: UIDatePicker!
     @IBOutlet var startbutton: UIButton!
+    @IBOutlet var resetbutton: UIButton!
     @IBOutlet var label: UILabel!
     
     var itemNameArray = [String]()
@@ -40,6 +41,9 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
         
         startbutton.layer.borderWidth = 2.0
         startbutton.layer.borderColor = UIColor.green.cgColor
+        
+        resetbutton.layer.borderWidth = 2.0
+        resetbutton.layer.borderColor = UIColor.red.cgColor
         
         count = 60
         if saveData.object(forKey: "count") != nil {
@@ -107,11 +111,15 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
         } else if timer.isValid {
             timer.invalidate()
             startbutton.setTitle("スタート", for: .normal)
-            sleepTimePicker.isHidden = false
-            label.isHidden = true
-            count = countMemo
-            saveData.set(count, forKey: "count")
         }
+    }
+    @IBAction func reset() {
+        timer.invalidate()
+        startbutton.setTitle("スタート", for: .normal)
+        sleepTimePicker.isHidden = false
+        label.isHidden = true
+        count = countMemo
+        saveData.set(count, forKey: "count")
     }
     
     @IBAction func datePickerValueChanged(sender: UIDatePicker) {
