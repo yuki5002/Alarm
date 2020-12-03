@@ -91,8 +91,10 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
             startbutton.setTitle("スタート", for: .normal)
             sleepTimePicker.isHidden = false
             label.isHidden = true
+            table.isHidden = false
             count = countMemo
             saveData.set(count, forKey: "count")
+            performSegue(withIdentifier: "toTimerPlay", sender: nil)
         }
     }
     
@@ -108,6 +110,7 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
             startbutton.setTitle("ストップ", for: .normal)
             sleepTimePicker.isHidden = true
             label.isHidden = false
+            table.isHidden = true
         } else if timer.isValid {
             timer.invalidate()
             startbutton.setTitle("スタート", for: .normal)
@@ -118,6 +121,7 @@ class TimerSettingViewController: UIViewController, UITableViewDataSource, UITab
         startbutton.setTitle("スタート", for: .normal)
         sleepTimePicker.isHidden = false
         label.isHidden = true
+        table.isHidden = false
         count = countMemo
         saveData.set(count, forKey: "count")
     }

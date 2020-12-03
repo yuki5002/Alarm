@@ -77,7 +77,7 @@
                 <navigationController id="ooA-NV-S5f" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5X7-fy-BuR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ikc-yE-UVG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -209,14 +209,14 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0E-Ap-QKG">
-                                <rect key="frame" x="67" y="171" width="281" height="82"/>
+                                <rect key="frame" x="67" y="206" width="281" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEm-gU-sQb">
-                                <rect key="frame" x="243" y="629" width="120" height="120"/>
+                                <rect key="frame" x="243" y="619" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -234,7 +234,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdp-9L-Tnj">
-                                <rect key="frame" x="51" y="629" width="120" height="120"/>
+                                <rect key="frame" x="51" y="619" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -262,33 +262,57 @@
                         <outlet property="sleepTimePicker" destination="Hkl-vZ-aeG" id="GaX-lq-kTW"/>
                         <outlet property="startbutton" destination="tEm-gU-sQb" id="JCv-uX-t32"/>
                         <outlet property="table" destination="EcS-v1-3Bb" id="zpR-oh-s2G"/>
+                        <segue destination="dH2-oD-bk2" kind="presentation" identifier="toTimerPlay" modalPresentationStyle="fullScreen" id="893-yn-YOE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rS6-9g-kzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1666.6666666666667" y="217.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Timer Play View Controller-->
         <scene sceneID="6xp-a4-hXc">
             <objects>
-                <viewController id="dH2-oD-bk2" sceneMemberID="viewController">
+                <viewController id="dH2-oD-bk2" customClass="TimerPlayViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hrl-xo-4Tm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2b-gh-b9Y">
-                                <rect key="frame" x="184" y="675" width="46" height="30"/>
+                                <rect key="frame" x="87" y="692" width="241" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="停止">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="back" destination="dH2-oD-bk2" eventType="touchUpInside" id="XIu-Pd-Glz"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owY-K4-VLd">
+                                <rect key="frame" x="52" y="197" width="311" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Me0-I0-K79"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="owY-K4-VLd" id="yxy-ta-aQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo0-m0-4Cu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="218"/>
+            <point key="canvasLocation" x="2621.739130434783" y="217.63392857142856"/>
         </scene>
         <!--アラーム-->
         <scene sceneID="xrT-nB-orZ">
@@ -320,7 +344,7 @@
                     <navigationItem key="navigationItem" title="アラーム" id="pMI-5w-q4w">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" landscapeImage="plus" id="0r6-6q-YIk">
                             <connections>
-                                <segue destination="ooA-NV-S5f" kind="presentation" id="kgy-kK-QTl"/>
+                                <segue destination="ooA-NV-S5f" kind="presentation" modalPresentationStyle="fullScreen" id="kgy-kK-QTl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -373,11 +397,11 @@
             <objects>
                 <viewController id="53g-c0-RnO" customClass="AlarmSettingViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kMw-1f-OWP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gj4-yq-XzY">
-                                <rect key="frame" x="0.0" y="56" width="414" height="248"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="248" id="EwA-qK-rRH"/>
                                 </constraints>
@@ -446,7 +470,7 @@
             <objects>
                 <viewController id="Eu9-U5-xjD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a5y-GZ-DRx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="SBf-5t-kkC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -462,7 +486,7 @@
             <objects>
                 <viewController id="VOk-Jl-3jX" customClass="MissionViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="39h-FJ-5Ck">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fSK-yi-oNz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -478,7 +502,7 @@
             <objects>
                 <viewController id="e6h-kG-bO8" customClass="NumberViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oaj-GQ-q5Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="hqU-Kh-kLZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -494,7 +518,7 @@
             <objects>
                 <viewController id="Wbg-Q8-K3X" customClass="SoundViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OgN-GJ-xKf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Wqr-2P-C9a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -510,7 +534,7 @@
             <objects>
                 <viewController id="lUk-wc-enw" customClass="SpeakerViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lE6-Tx-5oZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="RsY-ZZ-li4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -527,6 +551,9 @@
         <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

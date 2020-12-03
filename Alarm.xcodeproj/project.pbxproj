@@ -12,7 +12,8 @@
 		B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413224BC6B8600BF6483 /* SetViewController.swift */; };
 		B62B413524BC6C4C00BF6483 /* SleepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */; };
 		B62B413724BC6D4C00BF6483 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B413624BC6D4C00BF6483 /* Alarm.swift */; };
-		B64C294024C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B64C293F24C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 */; };
+		B64C294024C5D95900BC75E1 /* starmarker.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B64C293F24C5D95900BC75E1 /* starmarker.mp3 */; };
+		B699C8B725668961002AA282 /* TimerPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B699C8B625668961002AA282 /* TimerPlayViewController.swift */; };
 		B69FC84C24C59A51004A9E88 /* TimerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */; };
 		B69FC85224C5D48A004A9E88 /* MondaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC85124C5D48A004A9E88 /* MondaiViewController.swift */; };
 		B69FC85424C5D49D004A9E88 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FC85324C5D49D004A9E88 /* MissionViewController.swift */; };
@@ -35,7 +36,8 @@
 		B62B413224BC6B8600BF6483 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		B62B413424BC6C4C00BF6483 /* SleepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepingViewController.swift; sourceTree = "<group>"; };
 		B62B413624BC6D4C00BF6483 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		B64C293F24C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "LiT!使用 - スターマーカー.mp3"; sourceTree = "<group>"; };
+		B64C293F24C5D95900BC75E1 /* starmarker.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = starmarker.mp3; sourceTree = "<group>"; };
+		B699C8B625668961002AA282 /* TimerPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlayViewController.swift; sourceTree = "<group>"; };
 		B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingViewController.swift; sourceTree = "<group>"; };
 		B69FC85124C5D48A004A9E88 /* MondaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondaiViewController.swift; sourceTree = "<group>"; };
 		B69FC85324C5D49D004A9E88 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B69FC84B24C59A51004A9E88 /* TimerSettingViewController.swift */,
+				B699C8B625668961002AA282 /* TimerPlayViewController.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -134,7 +137,7 @@
 		B6AD078224ADF52700D53247 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				B64C293F24C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 */,
+				B64C293F24C5D95900BC75E1 /* starmarker.mp3 */,
 				B6AD078324ADF52700D53247 /* AppDelegate.swift */,
 				B6AD078524ADF52700D53247 /* SceneDelegate.swift */,
 				B69FC84D24C5D3BD004A9E88 /* Alarm */,
@@ -209,7 +212,7 @@
 			files = (
 				B62321CC24D2D44300B2FF8F /* AlarmTableViewCell.xib in Resources */,
 				B6AD079024ADF52800D53247 /* LaunchScreen.storyboard in Resources */,
-				B64C294024C5D95900BC75E1 /* LiT!使用 - スターマーカー.mp3 in Resources */,
+				B64C294024C5D95900BC75E1 /* starmarker.mp3 in Resources */,
 				B6AD078D24ADF52800D53247 /* Assets.xcassets in Resources */,
 				B6AD078B24ADF52700D53247 /* Main.storyboard in Resources */,
 			);
@@ -236,6 +239,7 @@
 				B69FC85824C5D4D7004A9E88 /* SoundViewController.swift in Sources */,
 				B62B413324BC6B8600BF6483 /* SetViewController.swift in Sources */,
 				B69FC85A24C5D4E6004A9E88 /* SpeakerViewController.swift in Sources */,
+				B699C8B725668961002AA282 /* TimerPlayViewController.swift in Sources */,
 				B6AD078624ADF52700D53247 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
