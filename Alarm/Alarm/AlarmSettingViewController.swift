@@ -16,8 +16,8 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
     
     var saveData: UserDefaults = UserDefaults.standard
     var id: Int = 0
-    var dataArray = [[String]]()
-    var addArray = [String]()
+    var dataArray = [[Any]]()
+    var addArray = [Any]()
     var selectedTimeStr: String = ""
     var mission: Int = 0
     var missionNum: Int = 0
@@ -69,9 +69,15 @@ class AlarmSettingViewController: UIViewController, UITableViewDataSource, UITab
         saveData.set(sound, forKey: "sound" + String(id))
         saveData.set(speaker, forKey: "speaker" + String(id))
         
+        dataArray = saveData.object(forKey: "dataArray") as! [[Any]]
         addArray = [selectedTimeStr, String(id)]
         dataArray.append(addArray)
+        print("appendの直後のDataArray")
+        print(dataArray)
         saveData.set(dataArray, forKey: "dataArray")
+        print("AddArray")
+        print(addArray)
+        print("DataArray")
         print(dataArray)
         print(String(mission) + String(missionNum) + String(sound) + String(speaker))
         dismiss(animated: true, completion: nil)
